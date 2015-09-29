@@ -5,19 +5,19 @@ import numpy as np
 import xlrd
 from numpy.linalg import pinv
 
-doc = xlrd.open_workbook("mlr07.xls")
+doc = xlrd.open_workbook("baseball_regression_data_set.xls")
 
 sh = doc.sheet_by_index(0)
 
 i = 0
-y = np.zeros(shape=(31,1))
-for i in range(31):
+y = np.zeros(shape=(26,1))
+for i in range(26):
     y[i] = sh.cell_value(1+i,0)
 
-x = np.zeros(shape=(31,4))
+x = np.zeros(shape=(26,4))
 j=0
 k=0
-for j in range(31):
+for j in range(26):
     for k in range(4):
         x[j][k] = sh.cell_value(j+1,k+1)
 
