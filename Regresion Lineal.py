@@ -80,6 +80,11 @@ for j in range(18):
     mape [j]= ((abs(yReal[j] - yPredecido[j])/yReal[j])/18)*100
     acumMape += ((abs(yReal[j] - yPredecido[j])/yReal[j])/18)*100
 
+print('Resultados de la prediccion del modelo \n')
+print yPredecido
+print('\n')
+
+print('MAPE \n')
 print mape
 
 print ('acumulado Mape ',acumMape)
